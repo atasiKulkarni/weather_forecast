@@ -1,0 +1,29 @@
+.listOfCities
+{
+  height: 50px;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+.section
+{
+    
+    display: flex;
+    margin:5px;
+}
+.left
+{
+    border: 2px solid rgb(14, 13, 13);
+    padding: 10px;
+    margin: 20px 20px 20px 240px;
+    height: 350px;
+    width:400px;
+}
+.right
+{
+    border: 2px solid rgb(8, 8, 8);
+    padding: 10px;
+    margin: 20px;
+    height: 350px;
+    width: 400px;
+}
