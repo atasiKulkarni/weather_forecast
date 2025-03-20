@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Login/Login.css";
-import { BrowserRouter as Link } from "react-router-dom";
 import $ from "jquery";
+import { useNavigate } from "react-router-dom";
 
 export function Login() {
+
+  const navigate = useNavigate()
+  const [userName, setUserName] = useState('')
+  const [password, setPassword] = useState('')
+
   function Handel() {
     loginBoxToggle($(".box-login-content"), $(".js-btn-signup"));
     loginBoxToggle($(".box-login-content"), $(".js-btn-login"));
@@ -22,7 +27,17 @@ export function Login() {
       });
     }
   }
-
+function HandelLogin ()
+{
+ if(userName === 'atasi' || password ===123)
+ {
+  navigate("/weather");
+ }
+ else{
+  alert("Invalid user")
+ }
+  
+}
   return (
     <div>
       <section className="login">
@@ -36,9 +51,9 @@ export function Login() {
             <div className="box-text">
               <div className="box-text--title">Create an account?</div>
               <h3>Hello Friends!!</h3>
-              <h3>Hello Friends!!</h3>
+             
               <p>
-                Start your Journey By Sigining Up with us sbjhsdbjfbdsjbfdff.
+                Enter your details and start Journey By Sigining Up with us .
               </p>
               <div className="button js-btn-login" onClick={Handel}>
                 SIGN UP
@@ -63,6 +78,8 @@ export function Login() {
                       name="username"
                       id="email"
                       placeholder="Username"
+                      value={userName}
+                      onChange={(e)=> setUserName(e.target.value)}
                       required
                     />
                   </div>
@@ -73,6 +90,8 @@ export function Login() {
                       id="password"
                       placeholder="Password"
                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                      value={password}
+                      onChange={(e)=> setPassword(e.target.value)}
                       required
                     />
                   </div>
@@ -83,12 +102,7 @@ export function Login() {
                     </label>
                   </div>
                   <div className="form-group clearfix">
-                    <a href="/weather">
-                  
-                    <button className="button-submit">LOGIN</button>
-               
-                     
-                    </a>
+                    <button className="button-submit" onClick={HandelLogin}>LOGIN</button>
                   </div>
                   <div className="form-group">
                     <a className="forget-password" href="/">
