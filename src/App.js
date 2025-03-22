@@ -68,7 +68,7 @@ function App() {
     const defaultCity = "London";
     const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${defaultCity}&days=7`;
     getWeatherDetails(API_URL);
-  }, []);
+  }, [API_KEY]);
 
   return (
     <div className="container">
