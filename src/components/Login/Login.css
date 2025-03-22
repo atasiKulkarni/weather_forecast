@@ -273,7 +273,7 @@
   .login label {
     width: 100%;
     font-weight: normal;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     cursor: pointer;
     display: block;
   }

@@ -28,14 +28,14 @@ const SearchSection = ({ getWeatherDetails, searchInputRef }) => {
     <div className="search-section">
       <form action="#" className="search-form" onSubmit={handleCitySearch}>
         <span className="material-symbols-rounded">
-        <img src={require('../../assests/search.png')} className=" search"  />
+        <img src={require('../../assests/search.png')} className=" search" alt="searchIcon" />
 
         </span>
         <input type="search" placeholder="Enter a city name" className="search-input" ref={searchInputRef} required />
       </form>
       <button className="location-button" onClick={handleLocationSearch}>
         <span className="material-symbols-rounded">
-        <img src={require('../../assests/current-location.png')} className="my_location"  />
+        <img src={require('../../assests/current-location.png')} className="my_location"  alt="location-icon"/>
           </span>
       </button>
     </div>
